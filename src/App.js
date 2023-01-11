@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {  Routes, Route , HashRouter } from 'react-router-dom';
 import './App.css';
 import { useState } from 'react';
 
@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
 
-      <BrowserRouter>
+      <HashRouter>
       <NavBar 
         allProducts={allProducts}
         setAllProducts={setAllProducts}
@@ -72,7 +72,7 @@ function App() {
           <Route path= '/clientes/edit/:id' element={<CompEditClient />}  />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
         
         
       

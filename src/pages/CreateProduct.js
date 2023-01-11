@@ -37,7 +37,7 @@ const CompCreateProduct = () => {
         }
 
         const url = await uploadFile(file);
-        console.log(url);
+        // console.log(url);
         const producto = {
             nombre,
             img: url,
@@ -45,11 +45,11 @@ const CompCreateProduct = () => {
             precio,
             cantidad
         }
-        console.log(producto);
+        // console.log(producto);
 
         try {
             const res = await axios.post(URL, producto);
-            console.log(res);
+            // console.log(res);
             Swal.fire({
                 icon: 'success',
                 title: 'Producto creado',
@@ -58,7 +58,7 @@ const CompCreateProduct = () => {
             })
             // navigate('/productos');
         } catch (error) {
-            console.log(error);
+            // console.log(error);
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',

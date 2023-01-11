@@ -1,13 +1,14 @@
 
 import error404 from '../assets/img/error404.jpg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Error = () => {
+    const navigate = useNavigate();
 
     // redireccionar en 5 sg
     setTimeout(() => {
-        window.location.href = '/';
+        navigate('/')
     }, 5000);
 
     return (

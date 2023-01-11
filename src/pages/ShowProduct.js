@@ -66,18 +66,18 @@ const CompShowProduct = ({allProducts, setAllProducts,countProducts, setCountPro
                         placeholder="Buscar Productos"
                         onChange={searchProduct} 
                         />
-                        <div className='row  row-cols-1 row-cols-md-3 g-4 mt-0 '>
+                        <div className='row  row-cols-1 row-cols-md-3 mt-0 '>
                             {resultados.map((product, index) => (
                                 <div className="col" key={index} >
-                                    <section className="container">
-                                        <div className="card mt-3 mb-3 "  >
-                                            <div style={{"maxWidth": "350px", "minHeight": "350px", "aspectRatio" : "auto 160/ 160"  }} >
-                                                <img src={product.img} alt="" className=' card-img-bottom'   />
+                                    <section className="container d-flex align-content-center justify-content-center">
+                                        <div className="card mt-3 mb-3 col-md-12 col-9 "  >
+                                            <div className='rounded-start card-img-top' style={{maxHeight: "350px", maxWidth: "390px" }} >
+                                                <img src={product.img} alt="" className=' card-img-top'   />
                                             </div>
                                             <div className="card-body bg-light">
-                                                <h5 className='card-title'>{product.nombre}</h5>
+                                                <h5 className='card-title'>{product.nombre.substring(0, 21)}</h5>
                                                 <p className='card-text' >{product.descripcion.substring(0, 100)}</p>
-                                                <h5 className='card-text mb-3'>${product.precio}</h5>
+                                                <h5 className='card-text mb-3'>${product.precio.substring(0, 13)}</h5>
                                                 <Link to={`producto/${product._id}`} className='btn btn-primary m-2 mb-1 mt-0'>More +</Link>
                                                 <button className='btn btn-success m-2 mb-0 mt-0' onClick={() => onAddProduct(product)}>Add to Cart</button>
                                             </div>

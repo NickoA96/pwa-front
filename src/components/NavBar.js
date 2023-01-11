@@ -37,7 +37,7 @@ const NavBar = ({countProducts, setCountProducts}) => {
                       <Link to='/nosotros' className='nav-link'>Nosotros</Link>
                     </li>
                   </ul>
-                  <div className="d-flex">
+                  <div className="">
                     <Link to='/cart' className='nav-link'>
                     <i className="fa-solid fa-cart-shopping"></i>
                     <span className="badge bg-danger rounded-pill">{count}</span>

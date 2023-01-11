@@ -57,7 +57,7 @@ const CompEditLogin = () => {
         const token = document.cookie.split('=')[1];
         setToken(token);
         if (!token) {
-            window.location.href = '/login';
+            navigate('/login')
         }
         else { 
             axios.get(URL, {
@@ -70,7 +70,7 @@ const CompEditLogin = () => {
             })
             .catch((err) => {
                 // console.log(err);
-                window.location.href = '/login';
+                navigate('/login');
             })
         }
     }, [])

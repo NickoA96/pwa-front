@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const URL = 'https://pwa-backmongo-production-8f1c.up.railway.app/clientes/';
@@ -11,6 +11,7 @@ const AdminClient = () => {
     const [clientes, setClientes] = useState([]);
     const [token, setToken] = useState('');
     const [search, setSearch] = useState('');
+    const navigate = useNavigate();
 
     const searchClient = (e) => {
         setSearch(e.target.value);
@@ -22,7 +23,7 @@ const AdminClient = () => {
         const token = document.cookie.split('=')[1];
         setToken(token);
         if (!token) {
-            window.location.href = '/login';
+            navigate('/login');
         }else { 
             axios.get(URL, {
                 headers: {
@@ -35,9 +36,10 @@ const AdminClient = () => {
         }
     }, [])
 
-    const logout = async () => {
-        document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-        window.location.href = '/login';
+    const logout = () => {
+        document.cookie = 'token=; max-age=0; path=/; samesite=strict;';
+        navigate('/login');
+        
     }
 
     const getClientes = async () => {
