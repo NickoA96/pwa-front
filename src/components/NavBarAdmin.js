@@ -5,7 +5,7 @@ export const NavBarAdmin = () => {
 
     const logout = () => {
         document.cookie = 'token=; max-age=0; path=/; samesite=strict;';
-        window.location.href = '/login';
+        window.location.href = '/';
     }
 
     return (
