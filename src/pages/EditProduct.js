@@ -50,7 +50,7 @@ const CompEditProduct = () => {
         else { 
             axios.get(URL, {
                 headers: {
-                    // 'Authorization': `Bearer ${token}`
+                    'Authorization': `Bearer ${token}`
                 }
             })
             .then((res) => {
