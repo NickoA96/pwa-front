@@ -48,7 +48,7 @@ const CompCreateProduct = () => {
         // console.log(producto);
 
         try {
-            const res = await axios.post(URL, producto);
+            await axios.post(URL, producto);
             // console.log(res);
             Swal.fire({
                 icon: 'success',
@@ -81,8 +81,6 @@ const CompCreateProduct = () => {
 
                                 <label>Imagen</label>
                                 <input type='file' className='form-control' onChange={(e) => setFile(e.target.files[0])} />
-
-
 
                                 <label>Precio</label>
                                 <input type='text' className='form-control' value={precio} onChange={(e) => setPrecio(e.target.value)} />

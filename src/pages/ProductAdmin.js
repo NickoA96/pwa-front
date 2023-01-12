@@ -30,7 +30,7 @@ const ProductAdmin = () => {
         else {
             getProducts();
         }
-    }, [])
+    }, [navigate])
 
     const logout = () => {
         document.cookie = 'token=; max-age=0; path=/; samesite=strict;';
@@ -118,6 +118,8 @@ const ProductAdmin = () => {
 
 export default ProductAdmin;
                             
+
+
 
 
 

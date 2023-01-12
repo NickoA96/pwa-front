@@ -2,7 +2,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
-// import cart from '../components/cart';
 
 
 const URL = 'https://pwa-backmongo-production-8f1c.up.railway.app/productos/';

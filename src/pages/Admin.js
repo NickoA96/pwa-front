@@ -34,7 +34,7 @@ const AdminClient = () => {
                     setClientes(res.data);
                 })
         }
-    }, [])
+    }, [navigate])
 
     const logout = () => {
         document.cookie = 'token=; max-age=0; path=/; samesite=strict;';
@@ -109,4 +109,6 @@ const AdminClient = () => {
 }
 
 export default AdminClient;
+
+
 

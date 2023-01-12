@@ -73,7 +73,7 @@ const CompEditLogin = () => {
                 navigate('/login');
             })
         }
-    }, [])
+    }, [navigate])
     
     useEffect(() => {
         getClienteById()

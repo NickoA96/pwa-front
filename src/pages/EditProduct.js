@@ -2,35 +2,69 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { uploadFile } from '../firebase/config';
+
 
 
 const URL = 'https://pwa-backmongo-production-8f1c.up.railway.app/productos/';
 
 const CompEditProduct = () => {
     const [nombre, setNombre] = useState('');
+    const [file, setFile] = useState(null);
     const [img, setImg] = useState('');
     const [descripcion, setDescripcion] = useState('');
     const [precio, setPrecio] = useState('');
-
+    const [cantidad, setCantidad] = useState('');
     const [token, setToken] = useState('');
     const navigate = useNavigate();
     const { id } = useParams();
 
+
+
+
     const update = async (e) => {
         e.preventDefault();
-        const product = {
-            nombre,
-            img,
-            descripcion,
-            precio
-        }
-        if (nombre === '' || img === '' || descripcion === '' || precio === '') {
-            Swal.fire('Todos los campos son obligatorios');
+        if (nombre === '' || precio === '' || descripcion === '' || cantidad === '') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Todos los campos son obligatorios',
+            })
             return;
         }
-        await axios.put(URL + id, product);
-        Swal.fire('Producto actualizado con exito');
-        navigate('/admin/productos');
+        
+        // en caso de que no se haya seleccionado una imagen nueva se mantiene la que ya tenia el producto 
+        let imgURL = img;
+        if (file) {
+            imgURL = await uploadFile(file);
+        }
+        const producto = {
+            nombre,
+            img: imgURL,
+            descripcion,
+            precio,
+            cantidad
+        }
+
+
+        try {
+            await axios.put(URL + id , producto);
+            // console.log(res);
+            Swal.fire({
+                icon: 'success',
+                title: 'Producto editado',
+                showConfirmButton: false,
+                timer: 1500
+            })
+            navigate('/admin/productos');
+        } catch (error) {
+            // console.log(error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Ocurrio un error',
+            })
+        }
     }
 
     const getProductById = async () => {
@@ -39,6 +73,7 @@ const CompEditProduct = () => {
         setImg(response.data.img);
         setDescripcion(response.data.descripcion);
         setPrecio(response.data.precio);
+        setCantidad(response.data.cantidad);
     }
 
     useEffect(() => {
@@ -61,7 +96,7 @@ const CompEditProduct = () => {
                 navigate('/login')
             })
         }
-    }, [])
+    }, [navigate])
     
     useEffect(() => {
         getProductById();
@@ -83,14 +118,22 @@ const CompEditProduct = () => {
                                 <label>Nombre</label>
                                 <input type='text' className='form-control' value={nombre} onChange={(e) => setNombre(e.target.value)} />
 
-                                <label>Img</label>
-                                <input type='text' className='form-control' value={img} onChange={(e) => setImg(e.target.value)} />
+                                <div>
+                                <label>Imagen</label>
+                                <br />
+                                <img src={img} alt={nombre} width='100' />
+                                <input type='file' className='form-control' onChange={(e) => setFile(e.target.files[0])} />
+                                </div>
 
                                 <label>Precio</label>
                                 <input type='text' className='form-control' value={precio} onChange={(e) => setPrecio(e.target.value)} />
 
                                 <label>Descripcion</label>
                                 <textarea  type='text' className='form-control' value={descripcion} onChange={(e) => setDescripcion(e.target.value)} />
+
+                                <label>Cantidad</label>
+                                <input type='number' className='form-control' value={cantidad} onChange={(e) => setCantidad(e.target.value)} />
+
                             </div>
                             <button type='submit' className='btn btn-success mt-3 mb-3'><i className="fa-solid fa-check"></i>
                             </button>
