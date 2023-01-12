@@ -13,10 +13,13 @@ PROYECTO INTEGRADOR FINAL PROGRAMACIÓN WEB AVANZADA - UTN
   
                    Puede visitar la pagina y registrarse.
   * Administrador :
-  
-                   Usuarios : Se puede editar y eliminar la lista de usuarios registrados.
+   
+   
+              🟢 Login : Una vez logeado se autoriza mediante el sistema de token y cookies a acceder al menu del administrador
                    
-                   Productos : Se puede crear (cargando una imagen), editar y eliminar la lista de  productos publicados.
+                        ✔️  Usuarios : Se puede editar y eliminar la lista de usuarios registrados.
+                   
+                        ✔️  Productos : Se puede crear (cargando una imagen), editar y eliminar la lista de productos publicados.
 
 ## Tecnologías Utilizadas :
 * FrontEnd: ReactJS | JS | CSS | React-Router-Dom | Bootstrap | Axios | Sweetalert2 
@@ -26,8 +29,12 @@ PROYECTO INTEGRADOR FINAL PROGRAMACIÓN WEB AVANZADA - UTN
 * Data Base : Mongodb
 
 ## Deploy 🚀 : 
-*  FrontEnd : https://pwafinal-by-albornoz-nicolas.netlify.app/#/
-*  Github BackEnd : https://github.com/NickoA96/pwa-backMongo
+   
+* [FrontEnd] 
+* [BackEnd]       
+
+  [FrontEnd]: https://pwafinal-by-albornoz-nicolas.netlify.app/#/
+  [BackEnd]: https://github.com/NickoA96/pwa-backMongo
     
     
     
