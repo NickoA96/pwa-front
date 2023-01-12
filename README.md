@@ -18,18 +18,16 @@ PROYECTO INTEGRADOR FINAL PROGRAMACIÓN WEB AVANZADA - UTN
                    
                    Productos : Se puede crear (cargando una imagen), editar y eliminar la lista de  productos publicados.
 
-## Tecnologías Utilizadas  🚀:
+## Tecnologías Utilizadas :
 * FrontEnd: ReactJS | JS | CSS | React-Router-Dom | Bootstrap | Axios | Sweetalert2 
 
 * BackEnd: JS | Node | Express | Mongoose | Multer | Bcryptjs | Cors | Cookie-Parser | Jsonwebtoken
 
 * Data Base : Mongodb
 
-## Deploy 🔗: 
-
-    * FrontEnd : https://pwafinal-by-albornoz-nicolas.netlify.app/#/
-    
-    * Github BackEnd : https://github.com/NickoA96/pwa-backMongo
+## Deploy 🚀 : 
+*  FrontEnd : https://pwafinal-by-albornoz-nicolas.netlify.app/#/
+*  Github BackEnd : https://github.com/NickoA96/pwa-backMongo
     
     
     
