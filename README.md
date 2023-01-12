@@ -2,16 +2,16 @@
 
 ## Descripción y contexto:
 
-PROYECTO INTEGRADOR FINAL PROGRAMACION WEB AVANZADA - UTN
+PROYECTO INTEGRADOR FINAL PROGRAMACIÓN WEB AVANZADA - UTN
 
 * PROFESOR : Bernal Pastor
 
 * Alumno : Nicolas Albornoz
 
-* Descripcion: En este proyecto se busco poder implementar las tecnologias vistas a lo largo de la cursada. Del lado del Backend fue crear una API que sea consumida por la app. Del lado del Frontend mi idea para este proyecto MERN fue realizar un e-commerce de ventas de articulos tecnologicos , donde se pueda tener la experiencia del lado usuario y administrador.
+* Descripcion: En este proyecto se busco poder implementar las tecnologías vistas a lo largo de la cursada. Del lado del Backend fue crear una API que sea consumida por la app. Del lado del Frontend mi idea para este proyecto MERN fue realizar un e-commerce de ventas de artículos tecnológicos , donde se pueda tener la experiencia del lado usuario y administrador.
   * Usuario :
   
-                   Puede visitar la pagina y resgistrarse.
+                   Puede visitar la pagina y registrarse.
   * Administrador :
   
                    Usuarios : Se puede editar y eliminar la lista de usuarios registrados.
@@ -23,7 +23,7 @@ PROYECTO INTEGRADOR FINAL PROGRAMACION WEB AVANZADA - UTN
 
 * BackEnd: JS | Node | Express | Mongoose | Multer | Bcryptjs | Cors | Cookie-Parser | Jsonwebtoken
 
-* Data Base : Moongodb
+* Data Base : Mongodb
 
 ## Deploy 🔗: 
 
@@ -32,7 +32,7 @@ PROYECTO INTEGRADOR FINAL PROGRAMACION WEB AVANZADA - UTN
     
     
     
-## Imagenes :
+## Imágenes :
 
 ![Captura de pantalla (25)](https://user-images.githubusercontent.com/105244423/211947126-88322328-c361-4d35-b07b-f9cd3a58ca7b.png)
 ![Captura de pantalla (28)](https://user-images.githubusercontent.com/105244423/211947146-2727821f-d21c-4d90-9645-2dda35b9c4b6.png)
