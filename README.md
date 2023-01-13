@@ -19,7 +19,7 @@ PROYECTO INTEGRADOR FINAL PROGRAMACIÓN WEB AVANZADA - UTN
                    
                         ✔️  Usuarios : Se puede editar y eliminar la lista de usuarios registrados.
                    
-                        ✔️  Productos : Se puede crear (cargando una imagen), editar y eliminar la lista de productos publicados.
+                        ✔️  Productos : Se puede crear (cargando una imagen), editar y eliminar de la lista de productos publicados.
 
 ## Tecnologías Utilizadas :
 * FrontEnd: ReactJS | JS | CSS | React-Router-Dom | Bootstrap | Axios | Sweetalert2 
